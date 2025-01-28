@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-08-26 15:14:07.746944",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "patient",
+  "patient_name",
+  "insurance_policy",
+  "policy_number",
+  "total_claimed_amount",
+  "claim_status",
+  "claim_invoices",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CLM-RCD-.YYYY.-"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "insurance_policy",
+   "fieldtype": "Link",
+   "label": "Insurance Policy",
+   "options": "Insurance Policy"
+  },
+  {
+   "fieldname": "total_claimed_amount",
+   "fieldtype": "Currency",
+   "label": "Total Claimed Amount"
+  },
+  {
+   "fieldname": "claim_status",
+   "fieldtype": "Select",
+   "label": "Claim Status",
+   "options": "\nSubmitted\nUnder Review\nApproved\nDenied"
+  },
+  {
+   "fieldname": "claim_invoices",
+   "fieldtype": "Table",
+   "label": "Claim Invoices",
+   "options": "Claim Invoice"
+  },
+  {
+   "fetch_from": "insurance_policy.policy_number",
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "label": "Policy Number"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Claim Record",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-27 09:37:23.523855",
+ "modified_by": "Administrator",
+ "module": "Rasiin Healthcare Insurance",
+ "name": "Claim Record",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "patient, patient_name, insurance_policy, policy_number",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

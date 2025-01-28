@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-08-26 14:45:58.047798",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "insurance_company",
+  "policy_number",
+  "policyholder",
+  "policyholder_name",
+  "coverage_limits",
+  "expiration_date",
+  "enabled"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "coverage_limits",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Coverage Limits",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "expiration_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expire Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "policyholder.patient_name",
+   "fieldname": "policyholder_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "policyholder",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "label": "Insurance Company",
+   "options": "Insurance Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "INS-POL-.YYYY.-"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-26 11:45:17.320672",
+ "modified_by": "Administrator",
+ "module": "Rasiin Healthcare Insurance",
+ "name": "Insurance Policy",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "policy_number, policyholder, policyholder_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

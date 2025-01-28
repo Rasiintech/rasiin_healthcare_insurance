@@ -1,0 +1,251 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-08-26 15:14:07.746944",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "insurance_company",
+  "patient",
+  "patient_name",
+  "claim_status",
+  "claimed_date",
+  "column_break_xhzku",
+  "from_date",
+  "to_date",
+  "last_view",
+  "summary_claim_section",
+  "claim_invoices",
+  "detailed_claim_section",
+  "detailed_claim_invoices",
+  "totals_section",
+  "hidden_field",
+  "column_break_hrujm",
+  "total_invoiced_amount",
+  "total_insurance_amount",
+  "total_patient_amount",
+  "total_payment_amount",
+  "payment_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CLM-RCD-.YYYY.-"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Under Review",
+   "fieldname": "claim_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Claim Status",
+   "options": "\nUnder Review\nApproved\nRejected\nPartly Paid\nPaid"
+  },
+  {
+   "fieldname": "claim_invoices",
+   "fieldtype": "Table",
+   "label": "Claim Invoices",
+   "options": "Claim Invoice"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Insurance Claim",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Insurance Company",
+   "options": "Insurance Company",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "detailed_claim_invoices",
+   "fieldtype": "Table",
+   "label": "Detailed Claim Invoices",
+   "options": "Detailed Claim Invoices"
+  },
+  {
+   "fieldname": "summary_claim_section",
+   "fieldtype": "Section Break",
+   "label": "Summary Claim"
+  },
+  {
+   "fieldname": "detailed_claim_section",
+   "fieldtype": "Section Break",
+   "label": "Detailed Claim"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Total Invoiced Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "hidden_field",
+   "fieldtype": "Data",
+   "label": "Hidden Field",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hrujm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "claimed_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Claimed Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xhzku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_view",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Last View",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_insurance_amount",
+   "fieldtype": "Currency",
+   "label": "Total Insurance Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_patient_amount",
+   "fieldtype": "Currency",
+   "label": "Total Patient Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Total Paid Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Payment Status",
+   "options": "\nPaid\nPartly Paid\nUnpaid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1,
+   "set_only_once": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-28 15:30:04.975955",
+ "modified_by": "Administrator",
+ "module": "Rasiin Healthcare Insurance",
+ "name": "Insurance Claim",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

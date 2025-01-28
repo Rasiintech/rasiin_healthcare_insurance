@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 15:15:46.577491",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "insurance_policy",
+  "coverage_limit",
+  "expiry_date",
+  "total_invoices",
+  "total_invoiced_amount",
+  "total_insurance_amount",
+  "total_patient_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "patient.first_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "patient.insurance_policy",
+   "fieldname": "insurance_policy",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Insurance Policy",
+   "options": "Insurance Policy",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "insurance_policy.expiration_date",
+   "fieldname": "expiry_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_invoices",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Invoices",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_invoiced_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Invoiced Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_insurance_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Insurance Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "insurance_policy.coverage_limits",
+   "fieldname": "coverage_limit",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Coverage Limit"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_patient_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Patient Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-07 11:15:31.150319",
+ "modified_by": "Administrator",
+ "module": "Rasiin Healthcare Insurance",
+ "name": "Claim Invoice",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

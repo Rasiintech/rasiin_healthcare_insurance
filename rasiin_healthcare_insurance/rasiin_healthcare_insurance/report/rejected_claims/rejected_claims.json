@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-11-24 14:20:38.281274",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2024-11-24 14:20:38.281274",
+ "modified_by": "Administrator",
+ "module": "Rasiin Healthcare Insurance",
+ "name": "Rejected Claims",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Insurance Claim",
+ "report_name": "Rejected Claims",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

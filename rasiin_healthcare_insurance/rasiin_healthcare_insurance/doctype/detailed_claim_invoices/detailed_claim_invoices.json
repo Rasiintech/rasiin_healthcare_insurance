@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-15 10:30:20.316590",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "insurance_policy",
+  "policy_number",
+  "invoice_date",
+  "invoice_number",
+  "coverage_limit",
+  "invoice_amount",
+  "insurance_amount",
+  "patient_amount",
+  "expiry_date",
+  "is_rejected"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "columns": 1,
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "patient.insurance_policy",
+   "fieldname": "insurance_policy",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Insurance Policy",
+   "options": "Insurance Policy",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "insurance_policy.policy_number",
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Number",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "invoice_no.posting_date",
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Invoice Date",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "invoice_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Invoice Number",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "coverage_limit",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Coverage Limit",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Invoice Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "insurance_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Insurance Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "patient_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Patient Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "insurance_policy.expiration_date",
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "default": "0",
+   "fieldname": "is_rejected",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Rejected"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-19 12:13:26.655724",
+ "modified_by": "Administrator",
+ "module": "Rasiin Healthcare Insurance",
+ "name": "Detailed Claim Invoices",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

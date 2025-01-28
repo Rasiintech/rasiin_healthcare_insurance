@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include rasiin_healthcare_insurance *.css
+recursive-include rasiin_healthcare_insurance *.csv
+recursive-include rasiin_healthcare_insurance *.html
+recursive-include rasiin_healthcare_insurance *.ico
+recursive-include rasiin_healthcare_insurance *.js
+recursive-include rasiin_healthcare_insurance *.json
+recursive-include rasiin_healthcare_insurance *.md
+recursive-include rasiin_healthcare_insurance *.png
+recursive-include rasiin_healthcare_insurance *.py
+recursive-include rasiin_healthcare_insurance *.svg
+recursive-include rasiin_healthcare_insurance *.txt
+recursive-exclude rasiin_healthcare_insurance *.pyc
