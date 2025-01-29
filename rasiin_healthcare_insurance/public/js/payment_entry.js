@@ -1,4 +1,16 @@
 frappe.ui.form.on('Payment Entry', {
+    onload: function(frm) {
+        if (frappe.session.user) {
+            frappe.call({
+                method: "rasiin_healthcare_insurance.api.pos_profile.get_user_pos_profile",
+                callback: function(response) {
+                    if (response.message && response.message.mode_of_payment) {
+                        frm.set_value("mode_of_payment", response.message.mode_of_payment);
+                    }
+                }
+            });
+        }
+    },
     refresh(frm) {
         // alert("Hello")
     },
