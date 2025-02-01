@@ -19,12 +19,11 @@ doctype_js = {
     # "Patient Appointment" : "public/js/patient_encounter.js" , 
     # "Patient Encounter" : "public/js/encounter_steps.js",
     # "Sample Collection": "public/js/sample.js",
-    # "Inpatient Record": "public/js/inpatient_record.js"
-
-
-    
-    
+    # "Inpatient Record": "public/js/inpatient_record.js"  
     }
+doctype_list_js = {
+        "Lab Result" : "public/js/lab_result_list.js" ,  
+}
 # include js, css files in header of desk.html
 # app_include_css = "/assets/rasiin_healthcare_insurance/css/rasiin_healthcare_insurance.css"
 # app_include_js = "/assets/rasiin_healthcare_insurance/js/rasiin_healthcare_insurance.js"
