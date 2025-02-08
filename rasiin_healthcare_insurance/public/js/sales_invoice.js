@@ -69,12 +69,17 @@ function calculate_sales_invoice_billing_amounts(frm) {
     let effective_amount = total - discount_amount;
     effective_amount = Math.max(effective_amount, 0);
 
-    insurance_coverage_amount = (effective_amount * coverage_limits) / 100;
-    let patient_paid_amount = effective_amount - insurance_coverage_amount;
+    insurance_coverage_amount = ((effective_amount * coverage_limits) / 100).toFixed(2);
+    let patient_paid_amount = (effective_amount - insurance_coverage_amount).toFixed(2);
+
+    // Convert to numbers to avoid string concatenation issues
+    insurance_coverage_amount = parseFloat(insurance_coverage_amount);
+    patient_paid_amount = parseFloat(patient_paid_amount);
 
     // Set calculated values
     frm.set_value("insurance_coverage_amount", insurance_coverage_amount);
     frm.set_value("payable_amount", patient_paid_amount);
+
 }
 
 
