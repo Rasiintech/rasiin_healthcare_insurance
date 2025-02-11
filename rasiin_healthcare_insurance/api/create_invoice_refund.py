@@ -119,7 +119,7 @@ def handle_journal_entry_refund_invoice(cash_sales, method=None):
     
     is_return = cash_sales.is_return
     
-    if is_return:
+    if is_return and cash_sales.return_against:
         # Fetch the linked journal entries
         linked_journal_entries = frappe.get_all('Journal Entry', filters={
             'reference_invoice': cash_sales.return_against,

@@ -1,0 +1,860 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-12-28 22:08:59.886481",
+  "name": "Inventory",
+  "role_profile": "Inventory",
+  "roles": [
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Inventory",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-12-28 22:08:59.894472",
+  "name": "Manufacturing",
+  "role_profile": "Manufacturing",
+  "roles": [
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing User"
+   },
+   {
+    "parent": "Manufacturing",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-12-28 22:08:59.916170",
+  "name": "Accounts",
+  "role_profile": "Accounts",
+  "roles": [
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Accounts",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-12-28 22:08:59.920297",
+  "name": "Sales",
+  "role_profile": "Sales",
+  "roles": [
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Sales",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-12-28 22:08:59.924782",
+  "name": "Purchase",
+  "role_profile": "Purchase",
+  "roles": [
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "Purchase",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-05 08:45:55.833984",
+  "name": "Cashier",
+  "role_profile": "Cashier",
+  "roles": [
+   {
+    "parent": "Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Cashier"
+   },
+   {
+    "parent": "Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Healthcare Administrator"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:10:00.654706",
+  "name": "Doctor",
+  "role_profile": "Doctor",
+  "roles": [
+   {
+    "parent": "Doctor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Doctor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Doctor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Healthcare Administrator"
+   },
+   {
+    "parent": "Doctor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Doctor"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:13:37.746834",
+  "name": "Main Cashier",
+  "role_profile": "Main Cashier",
+  "roles": [
+   {
+    "parent": "Main Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Main Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Main Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Main Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Main Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Cashier"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:02:25.384819",
+  "name": "Lab",
+  "role_profile": "Lab",
+  "roles": [
+   {
+    "parent": "Lab",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Lab"
+   },
+   {
+    "parent": "Lab",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Laboratory User"
+   },
+   {
+    "parent": "Lab",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:02:43.441309",
+  "name": "Lab Supervisor",
+  "role_profile": "Lab Supervisor",
+  "roles": [
+   {
+    "parent": "Lab Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Lab"
+   },
+   {
+    "parent": "Lab Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Laboratory User"
+   },
+   {
+    "parent": "Lab Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:08:18.985630",
+  "name": "Medical Director",
+  "role_profile": "Medical Director",
+  "roles": [
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Lab"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Laboratory User"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Healthcare Admin"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Healthcare Administrator"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "LabTest Approver"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Nurse"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maternity"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "NICU"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "OBS"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Nursing User"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Dental"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Insights Admin"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Insights User"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Imaging"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "OT"
+   },
+   {
+    "parent": "Medical Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:35:55.409920",
+  "name": "Imaging",
+  "role_profile": "Imaging",
+  "roles": [
+   {
+    "parent": "Imaging",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Imaging"
+   },
+   {
+    "parent": "Imaging",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:12:26.924380",
+  "name": "Pharmacy",
+  "role_profile": "Pharmacy",
+  "roles": [
+   {
+    "parent": "Pharmacy",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Pharmacy",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Pharmacy",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Pharmacy",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Pharmacy",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Pharmacy"
+   },
+   {
+    "parent": "Pharmacy",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Cashier"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:14:52.550896",
+  "name": "OT",
+  "role_profile": "HR",
+  "roles": [
+   {
+    "parent": "OT",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "OT"
+   },
+   {
+    "parent": "OT",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "OT",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "OT",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR User"
+   },
+   {
+    "parent": "OT",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:13:30.666875",
+  "name": "Pharmacy Supervisor",
+  "role_profile": "Pharmacy Supervisor",
+  "roles": [
+   {
+    "parent": "Pharmacy Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Pharmacy Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Pharmacy Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Pharmacy Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Pharmacy Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Pharmacy"
+   },
+   {
+    "parent": "Pharmacy Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Cashier"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:19:19.887357",
+  "name": "Finance",
+  "role_profile": "Finance",
+  "roles": [
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Cashier"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Healthcare Administrator"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Report Manager"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Master Manager"
+   },
+   {
+    "parent": "Finance",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Master Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:33:53.391508",
+  "name": "Nurse",
+  "role_profile": "Nurse",
+  "roles": [
+   {
+    "parent": "Nurse",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Nurse"
+   },
+   {
+    "parent": "Nurse",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Nurse",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Nursing User"
+   },
+   {
+    "parent": "Nurse",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:33:44.961229",
+  "name": "Nurse Supervisor",
+  "role_profile": "Nurse Supervisor",
+  "roles": [
+   {
+    "parent": "Nurse Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Nurse"
+   },
+   {
+    "parent": "Nurse Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Nurse Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Nursing User"
+   },
+   {
+    "parent": "Nurse Supervisor",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:28:54.659827",
+  "name": "Emergency",
+  "role_profile": "Emergency",
+  "roles": [
+   {
+    "parent": "Emergency",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Emergency Nurse"
+   },
+   {
+    "parent": "Emergency",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Emergency",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:30:16.374453",
+  "name": "Admission",
+  "role_profile": "Admission",
+  "roles": [
+   {
+    "parent": "Admission",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Admission",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "IPD"
+   },
+   {
+    "parent": "Admission",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Admission",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Admission",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:31:51.994544",
+  "name": "GP",
+  "role_profile": "GP",
+  "roles": [
+   {
+    "parent": "GP",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Healthcare Administrator"
+   },
+   {
+    "parent": "GP",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "GP",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "IPD"
+   },
+   {
+    "parent": "GP",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "GP",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "GP",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2025-02-04 15:34:51.017557",
+  "name": "Maternity",
+  "role_profile": "Maternity",
+  "roles": [
+   {
+    "parent": "Maternity",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maternity"
+   },
+   {
+    "parent": "Maternity",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Physician"
+   },
+   {
+    "parent": "Maternity",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Maternity",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   }
+  ]
+ }
+]

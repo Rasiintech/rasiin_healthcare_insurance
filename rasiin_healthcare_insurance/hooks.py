@@ -140,7 +140,7 @@ doc_events = {
         "on_submit": [
             # "rasiin_healthcare_insurance.api.patient_insurance_billing.update_payment_and_outstanding",
             "rasiin_healthcare_insurance.api.patient_insurance_billing.create_journal_entry_for_insurance",
-            "rasiin_healthcare_insurance.api.create_invoice_refund.handle_journal_entry_refund_invoice",
+            # "rasiin_healthcare_insurance.api.create_invoice_refund.handle_journal_entry_refund_invoice",
             "rasiin_healthcare_insurance.api.patient_insurance_billing.update_patient_amount",
             ],
         "before_cancel": [
@@ -275,31 +275,18 @@ scheduler_events = {
 
 fixtures = [
     {
-        "doctype": "Client Script",
-        "filters": [
-            ["module", "=", "Rasiin Healthcare Insurance"]
-        ]
-    },
-    {
-        "doctype": "Server Script",
-        "filters": [
-            ["module", "=", "Rasiin Healthcare Insurance"]
-        ]
-    },
-    {
-        "doctype": "Print Format",
-        "filters": [
-            ["module", "=", "Rasiin Healthcare Insurance"]
-        ]
-    },
-    {
-        "doctype": "Custom Field",
-        "filters": [
-            ["module", "=", "HIS"]
-        ]
-    },
-    {
-        "doctype": "Property Setter",
-        "filters": [["module", "=", "his"]]
-    },
+        "doctype": doctype,
+        "filters": [["module", "=", "Rasiin Healthcare Insurance"]]
+    }
+    for doctype in [
+        "Client Script",
+        "Server Script",
+        "Custom Field",
+        "Property Setter",
+        "Print Format",
+        # "Home Page"  # Uncomment if needed
+    ]
+] + [
+    {"doctype": "Role Profile"}
+
 ]
