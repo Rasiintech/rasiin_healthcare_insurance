@@ -287,6 +287,6 @@ fixtures = [
         # "Home Page"  # Uncomment if needed
     ]
 ] + [
-    {"doctype": "Role Profile"}
+    # {"doctype": "Role Profile"}
 
 ]
