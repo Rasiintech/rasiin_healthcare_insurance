@@ -57,7 +57,13 @@ function calculate_sales_invoice_billing_amounts(frm) {
     let discount_amount = frm.doc.discount_amount || 0;
     let coverage_limits = frm.doc.coverage_limits || 0;
     let insurance_coverage_amount = 0;
-    let paid_amount = frm.doc.payments[0]?.amount || 0;
+    // let paid_amount = frm.doc.payments[0]?.amount || 0;
+
+    // Safely access the payment amount if available
+    let paid_amount = 0;
+    if (frm.doc.payments && frm.doc.payments.length > 0) {
+        paid_amount = frm.doc.payments[0].amount || 0;
+    }
 
     // Validate discount
     if (total > 0 && discount_amount > 0 && total < discount_amount) {

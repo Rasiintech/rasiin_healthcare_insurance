@@ -31,12 +31,6 @@ frappe.query_reports["Insurance Claims Report"] = {
 			options: "Patient"
 		},
 		{
-			fieldname: "claim_status",
-			label: __("Claim Status"),
-			fieldtype: "Select",
-			options: ["", "Under Review", "Approved", "Rejected", "Partly Paid", "Paid"]
-		},
-		{
 			fieldname: "detailed",
 			label: __("Detailed View"),
 			fieldtype: "Check",

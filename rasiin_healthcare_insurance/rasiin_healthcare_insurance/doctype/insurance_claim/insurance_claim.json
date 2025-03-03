@@ -50,6 +50,7 @@
    "options": "\nUnder Review\nApproved\nRejected\nPartly Paid\nPaid"
   },
   {
+   "allow_bulk_edit": 1,
    "fieldname": "claim_invoices",
    "fieldtype": "Table",
    "label": "Claim Invoices",
@@ -74,6 +75,7 @@
    "set_only_once": 1
   },
   {
+   "allow_bulk_edit": 1,
    "allow_on_submit": 1,
    "fieldname": "detailed_claim_invoices",
    "fieldtype": "Table",
@@ -197,7 +199,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-05 08:39:37.067554",
+ "modified": "2025-03-01 10:11:36.395736",
  "modified_by": "Administrator",
  "module": "Rasiin Healthcare Insurance",
  "name": "Insurance Claim",
