@@ -26,15 +26,15 @@ def get_columns(filters):
     else:
         # Columns for the summary view
         return [
-            {"label": "Claim Number", "fieldname": "claim_number", "fieldtype": "Link", "options": "Insurance Claim", "width": 200},
-            {"label": "Claim Date", "fieldname": "claimed_date", "fieldtype": "Date", "width": 150},
+            # {"label": "Claim Number", "fieldname": "claim_number", "fieldtype": "Link", "options": "Insurance Claim", "width": 200},
+            # {"label": "Claim Date", "fieldname": "claimed_date", "fieldtype": "Date", "width": 150},
             {"label": "Insurance Company", "fieldname": "insurance_company", "fieldtype": "Link", "options": "Insurance Company", "width": 200},
             {"label": "Number of Invoices", "fieldname": "total_invoices", "fieldtype": "Number", "width": 150},
             # {"label": "Claim Total Amount", "fieldname": "claim_total", "fieldtype": "Currency", "width": 150},
             {"label": "Insurance Covered Amount", "fieldname": "total_insurance_amount", "fieldtype": "Currency", "width": 150},
             {"label": "Paid Amount", "fieldname": "total_payment_amount", "fieldtype": "Currency", "width": 150},
             {"label": "Outstanding Amount", "fieldname": "insurance_outstanding", "fieldtype": "Currency", "width": 150},
-            {"label": "Claim Status", "fieldname": "claim_status", "fieldtype": "Data", "width": 100},
+            # {"label": "Claim Status", "fieldname": "claim_status", "fieldtype": "Data", "width": 100},
         ]
 
 def get_data(filters):

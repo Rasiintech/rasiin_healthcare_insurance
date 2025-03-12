@@ -51,7 +51,7 @@ def get_data(filters):
     # if filters.get("coverage_limits"):
     #     conditions += " AND si.coverage_limits=%(coverage_limits)s"
     if filters.get("from_date") and filters.get("to_date"):
-        conditions += " AND si.creation BETWEEN %(from_date)s AND %(to_date)s"
+        conditions += " AND si.posting_date BETWEEN %(from_date)s AND %(to_date)s"
     # Only include invoices with a linked insurance policy
     conditions += " AND si.insurance_policy IS NOT NULL AND si.insurance_coverage_amount IS NOT NULL AND si.insurance_coverage_amount > 0"
     

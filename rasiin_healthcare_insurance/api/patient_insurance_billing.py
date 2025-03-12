@@ -5,7 +5,13 @@ from frappe import _
 @frappe.whitelist()
 def create_journal_entry_for_insurance(doc, method=None):
     sales_invoice = frappe.get_doc("Sales Invoice", doc.name)
-
+    his_settings = frappe.get_doc("HIS Settings", "HIS Settings")
+    insurance_account = ""
+    debtor_account = ""
+    if his_settings.insurance_receivable_account:
+        insurance_account = his_settings.insurance_receivable_account
+    if his_settings.debtors_account:
+        debtor_account = his_settings.debtors_account
     # Ensure the Sales Invoice has an insurance portion and outstanding amount
     if sales_invoice.insurance_coverage_amount > 0 and sales_invoice.outstanding_amount > 0:
         # Check if a journal entry has already been created for this insurance portion
@@ -23,8 +29,8 @@ def create_journal_entry_for_insurance(doc, method=None):
             # frappe.throw("STOP")
 
             # Accounts to be used in the Journal Entry
-            insurance_receivable_account = f"1320 - Insurance Receivable - {abbr}"
-            patient_receivable_account = f"1310 - Debtors - {abbr}"
+            insurance_receivable_account = frappe.db.get_value("Party Account", {"parent": insurance_name}, "account") or insurance_account
+            patient_receivable_account = frappe.db.get_value("Party Account", {"parent": patient_name}, "account") or debtor_account
 
             # Ensure positive insurance coverage amount before proceeding
             if sales_invoice.insurance_coverage_amount <= 0:

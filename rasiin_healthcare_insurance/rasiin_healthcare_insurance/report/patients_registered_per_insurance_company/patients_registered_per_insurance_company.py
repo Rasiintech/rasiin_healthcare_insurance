@@ -34,7 +34,7 @@ def get_data(filters):
     if filters.get("insurance_company"):
         conditions += " AND ip.insurance_company=%(insurance_company)s"
     if filters.get("from_date") and filters.get("to_date"):
-        conditions += " AND ip.creation BETWEEN %(from_date)s AND %(to_date)s"
+        conditions += " AND Date(ip.creation) BETWEEN %(from_date)s AND %(to_date)s"
 
     if filters.get("detailed"):
         # Fetch detailed patient and policy data

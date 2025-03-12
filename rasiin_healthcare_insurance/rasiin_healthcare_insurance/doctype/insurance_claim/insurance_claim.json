@@ -199,7 +199,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-01 10:11:36.395736",
+ "modified": "2025-03-09 08:39:40.441518",
  "modified_by": "Administrator",
  "module": "Rasiin Healthcare Insurance",
  "name": "Insurance Claim",
@@ -207,7 +207,6 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -219,7 +218,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -233,7 +231,6 @@
   {
    "amend": 1,
    "cancel": 1,
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -247,7 +244,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,

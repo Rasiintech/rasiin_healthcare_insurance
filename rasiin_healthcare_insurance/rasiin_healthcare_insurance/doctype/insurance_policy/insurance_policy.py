@@ -37,6 +37,7 @@ class InsurancePolicy(Document):
             
 
     def on_update(self):
+        pass
         patient_doc = frappe.get_doc("Patient", self.policyholder)
         customer_doc = frappe.get_doc("Customer", patient_doc.customer)
         outstanding_amount = get_customer_outstanding(customer_doc.name, "Hodan Hospital")
