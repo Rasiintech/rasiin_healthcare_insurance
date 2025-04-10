@@ -63,9 +63,9 @@ def get_data(filters):
 
     where_clause = " AND ".join(conditions)
     if where_clause:
-        where_clause = "WHERE si.docstatus = 1 AND " + where_clause
+        where_clause = "WHERE si.docstatus = 1 And si.coverage_limits >0 AND " + where_clause
     else:
-        where_clause = "WHERE si.docstatus = 1"
+        where_clause = "WHERE si.docstatus = 1 and si.coverage_limits> 0 "
 
     if filters.get("detailed"):
         query = f"""

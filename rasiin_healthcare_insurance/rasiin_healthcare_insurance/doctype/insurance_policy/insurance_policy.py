@@ -25,19 +25,19 @@ class InsurancePolicy(Document):
             patient_doc = frappe.get_doc("Patient", self.policyholder)
             customer_doc = frappe.get_doc("Customer", patient_doc.customer)
             
-            if customer_doc.credit_limits:
-                # Option 1: Set credit limit to 0 (unlimited)
-                for credit_limit in customer_doc.credit_limits:
-                    # frappe.errprint(credit_limit.credit_limit)
-                    # frappe.throw("STOP")
-                    credit_limit.credit_limit = 0  
+            # if customer_doc.credit_limits:
+            #     # Option 1: Set credit limit to 0 (unlimited)
+            #     for credit_limit in customer_doc.credit_limits:
+            #         # frappe.errprint(credit_limit.credit_limit)
+            #         # frappe.throw("STOP")
+            #         credit_limit.credit_limit = 0  
 
-                customer_doc.save()
-                frappe.db.commit()
+            #     customer_doc.save()
+            #     frappe.db.commit()
             
 
     def on_update(self):
-        pass
+        
         patient_doc = frappe.get_doc("Patient", self.policyholder)
         customer_doc = frappe.get_doc("Customer", patient_doc.customer)
         outstanding_amount = get_customer_outstanding(customer_doc.name, "Hodan Hospital")
@@ -47,46 +47,45 @@ class InsurancePolicy(Document):
             # If the policy is valid and enabled, update the Patient's insurance policy field
             frappe.db.set_value("Patient", self.policyholder, "insurance_policy", self.name)
 
-            if outstanding_amount > 0 and customer_doc.credit_limits:
-                for credit_limit in customer_doc.credit_limits:
-                    # frappe.errprint(credit_limit.credit_limit)
-                    # frappe.throw("STOP")
-                    credit_limit.credit_limit = outstanding_amount  
+        #     if outstanding_amount > 0 and customer_doc.credit_limits:
+        #         for credit_limit in customer_doc.credit_limits:
+        #             # frappe.errprint(credit_limit.credit_limit)
+        #             # frappe.throw("STOP")
+        #             credit_limit.credit_limit = outstanding_amount  
 
-                customer_doc.save()
-                frappe.db.commit()
+        #         customer_doc.save()
+        #         frappe.db.commit()
 
-            else:
-                # Option 1: Set credit limit to 0 (unlimited)
-                for credit_limit in customer_doc.credit_limits:
-                    # frappe.errprint(credit_limit.credit_limit)
-                    # frappe.throw("STOP")
-                    credit_limit.credit_limit = 0  
+        #     else:
+        #         # Option 1: Set credit limit to 0 (unlimited)
+        #         for credit_limit in customer_doc.credit_limits:
+        #             # frappe.errprint(credit_limit.credit_limit)
+        #             # frappe.throw("STOP")
+        #             credit_limit.credit_limit = 0  
 
-                customer_doc.save()
-                frappe.db.commit()
+        #         customer_doc.save()
+        #         frappe.db.commit()
         else:
             # If the policy is expired or disabled, clear the insurance policy field in the Patient document
             frappe.db.set_value("Patient", self.policyholder, "insurance_policy", None)
-            
-            if outstanding_amount > 0 and customer_doc.credit_limits:
-                for credit_limit in customer_doc.credit_limits:
-                    # frappe.errprint(credit_limit.credit_limit)
-                    # frappe.throw("STOP")
-                    credit_limit.credit_limit = outstanding_amount  
+        #     if outstanding_amount > 0 and customer_doc.credit_limits:
+        #         for credit_limit in customer_doc.credit_limits:
+        #             # frappe.errprint(credit_limit.credit_limit)
+        #             # frappe.throw("STOP")
+        #             credit_limit.credit_limit = outstanding_amount  
 
-                customer_doc.save()
-                frappe.db.commit()
+        #         customer_doc.save()
+        #         frappe.db.commit()
             
-            else:
-                # Option 1: Set credit limit to 0 (unlimited)
-                for credit_limit in customer_doc.credit_limits:
-                    # frappe.errprint(credit_limit.credit_limit)
-                    # frappe.throw("STOP")
-                    credit_limit.credit_limit = 0.01  
+        #     else:
+        #         # Option 1: Set credit limit to 0 (unlimited)
+        #         for credit_limit in customer_doc.credit_limits:
+        #             # frappe.errprint(credit_limit.credit_limit)
+        #             # frappe.throw("STOP")
+        #             credit_limit.credit_limit = 0.01  
 
-                customer_doc.save()
-                frappe.db.commit()
+        #         customer_doc.save()
+        #         frappe.db.commit()
             
 
 def auto_disable_expired_policies():
@@ -123,3 +122,10 @@ def auto_disable_expired_policies():
         frappe.errprint(f"{len(expired_policies)} insurance policies have been disabled and their policyholder fields have been cleared.")
     else:
         frappe.errprint("No expired policies found.")
+
+
+def credit_limit_after_save():
+    pass
+
+def credit_limit_after_submit():
+    pass

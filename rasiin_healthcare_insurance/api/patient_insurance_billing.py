@@ -50,6 +50,8 @@ def create_journal_entry_for_insurance(doc, method=None):
                     "party": patient_name,
                     "credit_in_account_currency": sales_invoice.insurance_coverage_amount,
                     "cost_center": sales_invoice.cost_center,
+                    "reference_type": "Sales Invoice",
+                    "reference_name": sales_invoice.name
                 },
             ]
 
@@ -66,6 +68,7 @@ def create_journal_entry_for_insurance(doc, method=None):
                     "patient": sales_invoice.patient,
                     "patient_name": sales_invoice.patient_name,
                     "insurance": sales_invoice.insurance,
+                    "sales_invoice": sales_invoice.name
                     
                 })
 

@@ -48,12 +48,16 @@
    "fetch_from": "policyholder.patient_name",
    "fieldname": "policyholder_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Patient Name"
   },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "policyholder",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Patient",
    "options": "Patient",
    "reqd": 1
@@ -82,7 +86,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-05 08:39:59.327599",
+ "modified": "2025-03-22 08:50:54.044222",
  "modified_by": "Administrator",
  "module": "Rasiin Healthcare Insurance",
  "name": "Insurance Policy",
@@ -142,5 +146,6 @@
  "search_fields": "policy_number, policyholder, policyholder_name",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

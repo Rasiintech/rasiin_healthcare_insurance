@@ -147,20 +147,20 @@ doc_events = {
           "rasiin_healthcare_insurance.api.make_cancel_queue.cancel_journal",  
         ],
     },
-    "Payment Entry": {
-        "on_submit": [
-            "rasiin_healthcare_insurance.api.insurance_payment.update_sales_invoice_on_payment",
-            "rasiin_healthcare_insurance.api.get_journal_entries_for_insurance_claim.update_insurance_claim_status",
-            ],
-        # "before_insert": "rasiin_healthcare_insurance.api.insurance_payment.update_sales_invoice_on_payment",
-        "on_cancel": [
-            "rasiin_healthcare_insurance.api.insurance_payment.reverse_sales_invoice_on_cancel",
-            "rasiin_healthcare_insurance.api.get_journal_entries_for_insurance_claim.update_insurance_claim_status",
+    # "Payment Entry": {
+    #     "on_submit": [
+    #         "rasiin_healthcare_insurance.api.insurance_payment.update_sales_invoice_on_payment",
+    #         "rasiin_healthcare_insurance.api.get_journal_entries_for_insurance_claim.update_insurance_claim_status",
+    #         ],
+    #     # "before_insert": "rasiin_healthcare_insurance.api.insurance_payment.update_sales_invoice_on_payment",
+    #     "on_cancel": [
+    #         "rasiin_healthcare_insurance.api.insurance_payment.reverse_sales_invoice_on_cancel",
+    #         "rasiin_healthcare_insurance.api.get_journal_entries_for_insurance_claim.update_insurance_claim_status",
             
-            ]
+    #         ]
         
-        # "before_save": "rasiin_healthcare_insurance.api.insurance_payment.update_sales_invoice_on_payment",
-    },
+    #     # "before_save": "rasiin_healthcare_insurance.api.insurance_payment.update_sales_invoice_on_payment",
+    # },
     "Journal Entry": {
         # "on_submit": [
         #     "rasiin_healthcare_insurance.api.insurance_payment.update_sales_invoice_on_payment",

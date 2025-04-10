@@ -57,7 +57,7 @@ def create_sales_order(doc, customer, amount):
         "customer": customer,
         "discount_amount": doc.discount,
         "voucher_no": doc.name,
-        "delivery_date": frappe.utils.getdate(),
+        "delivery_date": doc.date,
         "source_order": "OPD",
         "ref_practitioner": doc.practitioner,
         "items": items,
