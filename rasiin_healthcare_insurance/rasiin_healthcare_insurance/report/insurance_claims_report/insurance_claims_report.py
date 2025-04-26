@@ -12,11 +12,16 @@ def get_columns(filters):
     if filters.get("detailed"):
         # Columns for the detailed view
         return [
+            {"label": "Insurance Company", "fieldname": "insurance_company", "fieldtype": "Link", "options": "Insurance Company", "width": 200},
+            {"label": "Hospital Name", "fieldname": "company", "fieldtype": "Link", "options": "Company", "width": 200},
             {"label": "Patient", "fieldname": "patient", "fieldtype": "Data", "width": 150},
             {"label": "Patient Name", "fieldname": "patient_name", "fieldtype": "Data", "width": 200},
-            {"label": "Insurance Company", "fieldname": "insurance_company", "fieldtype": "Link", "options": "Insurance Company", "width": 200},
+            {"label": "Date of Birth", "fieldname": "dob", "fieldtype": "Data", "width": 150},
+            {"label": "Policy Number", "fieldname": "policy_number", "fieldtype": "Data", "width": 150},
+            {"label": "Date of Service", "fieldname": "invoice_date", "fieldtype": "Data", "width": 150},
             {"label": "Coverage Limit", "fieldname": "coverage_limits", "fieldtype": "Data", "options": "Insurance Company", "width": 150},
             {"label": "Invoice Number", "fieldname": "sales_invoice", "fieldtype": "Link", "options": "Sales Invoice", "width": 200},
+            {"label": "Journal Number", "fieldname": "reference_journal", "fieldtype": "Link", "options": "Journal Entry", "width": 200},
             {"label": "Invoice Amount", "fieldname": "total_invoiced", "fieldtype": "Currency", "width": 150},
             {"label": "Patient Amount", "fieldname": "patient_amount", "fieldtype": "Currency", "width": 150},
             {"label": "Insurance Covered Amount", "fieldname": "insurance_amount", "fieldtype": "Currency", "width": 150},
@@ -70,7 +75,9 @@ def get_data(filters):
     if filters.get("detailed"):
         query = f"""
             SELECT 
+                si.company AS company,
                 si.name AS sales_invoice,
+                si.reference_journal AS reference_journal,
                 si.posting_date AS invoice_date,
                 si.patient AS patient,
                 si.patient_name AS patient_name,
@@ -83,12 +90,16 @@ def get_data(filters):
                 si.insurance_paid AS insurance_paid,
                 (si.payable_amount - si.patient_paid) AS patient_outstanding,
                 (si.insurance_coverage_amount - si.insurance_paid) AS insurance_outstanding,
-                si.status AS invoice_status
+                si.status AS invoice_status,
+                p.dob AS dob,
+                si.policy_number AS policy_number
+
             FROM 
                 `tabSales Invoice` si
+            LEFT JOIN `tabPatient` p ON p.name = si.patient
             {where_clause}
             ORDER BY 
-                si.posting_date DESC, si.name ASC
+                p.patient_name ASC
         """
     else:
         query = f"""

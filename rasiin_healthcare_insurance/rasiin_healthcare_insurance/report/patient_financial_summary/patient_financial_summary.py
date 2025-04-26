@@ -105,7 +105,7 @@ def get_data(filters):
             WHERE 
                 si.docstatus = 1 {conditions}
             GROUP BY 
-                p.patient_name, si.insurance_company
+                p.name, si.insurance_company
         """.format(conditions=conditions)
 
     return frappe.db.sql(query, filters, as_dict=True)
