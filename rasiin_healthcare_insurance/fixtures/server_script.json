@@ -8,7 +8,7 @@
   "doctype": "Server Script",
   "doctype_event": "After Submit",
   "event_frequency": "All",
-  "modified": "2025-04-27 10:54:20.207866",
+  "modified": "2025-04-28 08:03:13.549087",
   "module": "Rasiin Healthcare Insurance",
   "name": "Insurance Refund",
   "reference_doctype": "Sales Invoice",
