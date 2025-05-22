@@ -12,6 +12,16 @@ frappe.ui.form.on('Payment Entry', {
         }
     },
     refresh(frm) {
+        if (frm.doc.docstatus === 1) {
+            frm.add_custom_button(__('Reconcile Payment'), function () {
+                // Set route options BEFORE navigation
+                frappe.route_options = {
+                    party_type: frm.doc.party_type || 'Customer',
+                    party: frm.doc.party
+                };
+                frappe.set_route('payment-reconciliation');
+            }, __('Actions'));
+        }
         // alert("Hello")
     },
 

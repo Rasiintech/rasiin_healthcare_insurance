@@ -62,7 +62,8 @@ def create_sales_order(doc, customer, amount):
         "ref_practitioner": doc.practitioner,
         "items": items,
         "so_type": "Cashiers",
-        "cost_center": doc.cost_center
+        "cost_center": doc.cost_center,
+        
         
     })
 
