@@ -13,7 +13,7 @@ from rasiin_healthcare_insurance.api.patient_insurance_billing import create_jou
 @frappe.whitelist()
 def create_que_order_bill(doc, method=None):
     
-    company = frappe.defaults.get_user_default("company")
+    company = frappe.defaults.get_user_default("company") or doc.company
     pos_profile = get_pos_profile(company)
     # mode_of_payment = frappe.db.get_value('POS Payment Method', {"parent": pos_profile.name}, 'mode_of_payment')
     mode_of_payment = doc.mode_of_payment
@@ -41,7 +41,7 @@ def create_que_order_bill(doc, method=None):
     
 
 def create_sales_order(doc, customer, amount):
-    company = frappe.defaults.get_user_default("company")
+    company = frappe.defaults.get_user_default("company") or doc.company
     company_doc = frappe.get_doc("Company", company)
     items = [{
         "item_code": "OPD Consultation",
@@ -53,6 +53,7 @@ def create_sales_order(doc, customer, amount):
         "doctype": "Sales Order",
         "transaction_date": doc.date,
         "patient": doc.patient,
+        "company": doc.company,
         "patient_name": doc.patient_name,
         "customer": customer,
         "discount_amount": doc.discount,
@@ -67,7 +68,7 @@ def create_sales_order(doc, customer, amount):
         
     })
 
-    sales_order.insert()
+    sales_order.insert(ignore_permissions=1)
     sales_order.submit()
     
     return sales_order.name
