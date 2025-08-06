@@ -282,7 +282,6 @@ fixtures = [
         "Client Script",
         "Server Script",
         "Custom Field",
-        "Property Setter",
         "Print Format",
         # "Home Page"  # Uncomment if needed
     ]

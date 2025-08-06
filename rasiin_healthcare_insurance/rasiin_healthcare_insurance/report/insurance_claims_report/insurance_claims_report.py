@@ -133,6 +133,7 @@ def execute(filters=None):
 def get_columns(filters):
     if filters.get("detailed"):
         return [
+            {"label": "Select", "fieldname": "select", "fieldtype": "Data", "width": 50},
             {"label": "Insurance Company", "fieldname": "insurance_company", "fieldtype": "Link", "options": "Insurance Company", "width": 200},
             {"label": "Hospital Name", "fieldname": "company", "fieldtype": "Link", "options": "Company", "width": 200},
             {"label": "Patient", "fieldname": "patient", "fieldtype": "Data", "width": 150},

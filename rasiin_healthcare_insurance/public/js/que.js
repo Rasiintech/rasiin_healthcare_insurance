@@ -112,10 +112,10 @@ frappe.ui.form.on('Que', {
         }
         if (doctor_amount) {
             if (frm.doc.insurance_policy) {
-                if (frm.doc.discount > patient_amount) {
-                    frappe.msgprint(__('Discount amount is greater than Patient Amount'));
-                    frm.set_value("discount", patient_amount);
-                }
+                // if (frm.doc.discount > patient_amount && frm.doc.coverage_limits != 100) {
+                //     frappe.msgprint(__('Discount amount is greater than Patient Amount'));
+                //     frm.set_value("discount", patient_amount);
+                // }
                 frm.set_value("patient_amount", patient_amount);
                 frm.set_value("insurance_coverage_amount", insurance_amount);
                 frm.set_value("total_amount", patient_amount + insurance_amount);

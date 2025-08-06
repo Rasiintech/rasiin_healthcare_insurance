@@ -24,6 +24,12 @@ frappe.query_reports["Missing Insurance Journal"] = {
 			"label": "Insurance Company",
 			"fieldtype": "Link",
 			"options": "Insurance Company"
+		},
+		{
+			"fieldname": "patient",
+			"label": "Patient",
+			"fieldtype": "Link",
+			"options": "Patient"
 		}
 	]
 
