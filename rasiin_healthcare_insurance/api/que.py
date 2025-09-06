@@ -125,7 +125,7 @@ def make_sales_invoice_direct(source_name, payable_amount, mode_of_payment=None,
             if target.que_reference != doc.name:
                 target.que_reference = doc.name
 
-        target.ignore_pricing_rule = 1
+        target.ignore_pricing_rule = 0
         target.flags.ignore_permissions = True
         target.run_method("set_missing_values")
         target.run_method("set_po_nos")
