@@ -40,11 +40,13 @@ frappe.query_reports["Insurance Payment Tracking"] = {
             frappe.call({
                 method: "frappe.desk.query_report.run",
                 args: {
-                    report_name: "Insurance Claims Report",
+                    report_name: "Insurance Payment Tracking",
                     filters: frappe.query_report.get_filter_values()
                 },
                 callback: function(response) {
                     let report_data = response.message.result;
+
+					// console.log(report_data);
                     
                     if (!report_data || report_data.length === 0) {
                         frappe.msgprint(__('No data found to print.'));
@@ -53,7 +55,7 @@ frappe.query_reports["Insurance Payment Tracking"] = {
 
                     // Extract all invoice numbers from the report
                     let invoice_numbers = report_data
-                        .map(row => row.sales_invoice)
+                        .map(row => row.reference_invoice) // Adjust the key based on your report's data structure
                         .filter(Boolean);
 						// .slice(0, 10); // Remove any null or undefined values
 

@@ -136,6 +136,7 @@ def get_data(filters):
         "si.insurance_policy  IS NOT NULL AND si.insurance_policy  != ''",
         "si.insurance_coverage_amount IS NOT NULL",
         "si.payable_amount IS NOT NULL",
+        "si.paid_amount != si.grand_total",
         "(si.reference_journal IS NULL OR si.reference_journal = '')",
         "si.posting_date BETWEEN %(from_date)s AND %(to_date)s",
     ]
