@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2024-08-26 14:45:58.047798",
@@ -86,7 +87,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-22 08:50:54.044222",
+ "modified": "2025-12-01 11:05:47.969260",
  "modified_by": "Administrator",
  "module": "Rasiin Healthcare Insurance",
  "name": "Insurance Policy",
